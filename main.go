@@ -79,3 +79,8 @@ func Time(t time.Time) string {
 func Date(t time.Time) string {
 	return t.Format("2006-01-02")
 }
+
+// http://www.datypic.com/sc/xsd/t-xsd_dateTime.html
+func DateTime(t time.Time) string {
+	return t.Format("2006-01-02T15:04:05-0700")
+}
