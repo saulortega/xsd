@@ -3,6 +3,7 @@ package xsd
 import (
 	"errors"
 	"regexp"
+	"strconv"
 	"strings"
 	"text/template"
 	"time"
@@ -83,4 +84,9 @@ func Date(t time.Time) string {
 // http://www.datypic.com/sc/xsd/t-xsd_dateTime.html
 func DateTime(t time.Time) string {
 	return t.Format("2006-01-02T15:04:05-0700")
+}
+
+// http://www.datypic.com/sc/xsd/t-xsd_boolean.html
+func Boolean(b bool) string {
+	return strconv.FormatBool(b)
 }
